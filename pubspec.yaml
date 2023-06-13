@@ -32,6 +32,9 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.0.0
   http: ^0.13.4
+  camera: ^0.10.0
+  sqflite: ^2.0.0+4
+  mysql1: ^0.19.4
 
 
   # The following adds the Cupertino Icons font to your application.

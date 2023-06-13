@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:knowledge/MyPrescriptionScreen.dart';
+import 'package:knowledge/MyReferralsScreen.dart';
+import 'package:knowledge/ReportScreen.dart';
 import 'package:knowledge/appointment.dart';
+import 'package:knowledge/viewAppintments.dart';
 import 'signup.dart';
 
 
@@ -60,37 +64,79 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 onTap: () {
-                  // Handle onTap for "Book an Appointment" link
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AppointmentScreen()),
+                  );
                 },
               ),
               ListTile(
                 leading: Icon(Icons.view_list), // Add an icon to the leading property
-                title: Text('View Appointments'),
+                title: Text(
+                  'View Appointments',
+                  style: TextStyle(
+                    color: Colors.white, // Set the text color to white
+                  ),
+                ),
                 onTap: () {
-                  // Handle onTap for "View Appointments" link
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ViewAppointmentsScreen()),
+                  );
                 },
               ),
               ListTile(
-                leading: Icon(Icons.view_list), // Add an icon to the leading property
-                title: Text('My Prescription'),
+                leading: Icon(Icons.description), // Add an icon to the leading property
+                title: Text('My Prescription',
+                  style: TextStyle(
+                    color: Colors.white, // Set the text color to white
+                  ),
+                ),
                 onTap: () {
-                  // Handle onTap for "View Appointments" link
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyPrescriptionScreen()),
+                  );
                 },
               ),
               ListTile(
-                leading: Icon(Icons.view_list), // Add an icon to the leading property
-                title: Text('Referals'),
+                leading: Icon(Icons.receipt), // Add an icon to the leading property
+                title: Text('Referals',
+                  style: TextStyle(
+                    color: Colors.white, // Set the text color to white
+                  ),
+                ),
                 onTap: () {
-                  // Handle onTap for "View Appointments" link
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyReferralsScreen()),
+                  );
                 },
               ),
               ListTile(
-                leading: Icon(Icons.lock), // Add an icon to the leading property
-                title: Text('Reports'),
+                leading: Icon(Icons.assignment),
+                title: Text(
+                  'Reports',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
                 onTap: () {
-                  // Handle onTap for "View Appointments" link
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => Builder(
+                  //       builder: (BuildContext context) => ReportScreen(
+                  //         appointments: appointments,
+                  //         prescriptions: prescriptions,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // );
                 },
               ),
+
+
 
             ],
           ),
